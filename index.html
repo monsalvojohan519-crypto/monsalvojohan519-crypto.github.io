@@ -3,89 +3,190 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mundo de Frutas</title>
+    <title>Guía de Frutas Saludables</title>
     <style>
+        :root {
+            --primary-color: #2e7d32;
+            --bg-color: #f4f6f5;
+            --card-bg: #ffffff;
+            --text-main: #222222;
+            --text-muted: #555555;
+        }
+
         body {
-            font-family: Arial, sans-serif;
+            font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
             margin: 0;
             padding: 0;
-            background-color: #f4f9f4;
-            color: #333;
+            line-height: 1.6;
         }
+
         header {
-            background-color: #2e7d32;
+            background-color: var(--primary-color);
             color: white;
-            text-align: center;
-            padding: 25px 15px;
+            padding: 2.5rem 1.5rem;
+            text-align: left;
         }
-        .contenedor {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            gap: 20px;
-            padding: 20px;
+
+        .header-tag {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            opacity: 0.9;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
         }
-        .tarjeta {
-            background: white;
+
+        header h1 {
+            font-size: 2rem;
+            margin: 0 0 0.5rem 0;
+        }
+
+        header p {
+            font-size: 1.05rem;
+            margin: 0;
+            opacity: 0.95;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 1.5rem;
+        }
+
+        .section-title {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            color: var(--primary-color);
+            margin-top: 2rem;
+            margin-bottom: 0.5rem;
+            font-weight: bold;
+        }
+
+        .card {
+            background-color: var(--card-bg);
             border-radius: 12px;
-            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-            width: 280px;
+            box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+            margin-bottom: 1.5rem;
             overflow: hidden;
-            text-align: center;
+            border: 1px solid #eaeaea;
         }
-        .tarjeta img {
+
+        .card-img {
             width: 100%;
-            height: 180px;
+            height: 220px;
             object-fit: cover;
         }
-        .tarjeta h3 {
-            color: #2e7d32;
-            margin: 15px 0 10px;
+
+        .card-content {
+            padding: 1.5rem;
         }
-        .tarjeta p {
-            padding: 0 15px 20px;
-            font-size: 15px;
-            color: #555;
+
+        .card-content h2 {
+            margin-top: 0;
+            color: var(--primary-color);
+            font-size: 1.5rem;
         }
-        footer {
-            text-align: center;
-            padding: 15px;
-            background-color: #1b5e20;
-            color: white;
-            margin-top: 20px;
+
+        .info-box {
+            background-color: #e8f5e9;
+            border-left: 4px solid var(--primary-color);
+            padding: 1rem;
+            border-radius: 4px;
+            margin-top: 1rem;
+            font-size: 0.95rem;
+            color: #1b5e20;
+        }
+
+        .step-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .step-list li {
+            padding: 0.75rem 0;
+            border-bottom: 1px solid #eee;
+        }
+
+        .step-list li:last-child {
+            border-bottom: none;
+        }
+
+        .step-letter {
+            font-weight: bold;
+            color: var(--primary-color);
+            margin-right: 0.5rem;
         }
     </style>
 </head>
 <body>
 
     <header>
-        <h1>🍎 Catálogo de Frutas Frescas 🍌</h1>
-        <p>Conoce sus beneficios y propiedades naturales</p>
+        <div class="header-tag">Una guía para empezar</div>
+        <h1>Las frutas saludables ya forman parte de nuestra vida diaria.</h1>
+        <p>Están en nuestra nutrición diaria, en los mercados que consultamos y en los hábitos que elegimos para vivir mejor. Entender sus propiedades empieza por conocer qué nos aportan.</p>
     </header>
 
-    <main class="contenedor">
-        <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?w=500" alt="Manzana Roja">
-            <h3>Manzana Roja</h3>
-            <p>Rica en fibra y antioxidantes. Ideal para mejorar la digestión y mantener la energía durante el día.</p>
+    <div class="container">
+
+        <div class="section-title">Primero, lo esencial</div>
+        <div class="card">
+            <div class="card-content" style="background: white;">
+                <h2 style="margin-bottom: 0.5rem;">¿Por qué consumir fruta fresca?</h2>
+                <p>Las frutas son fuentes naturales de vitaminas, minerales y antioxidantes indispensables para que nuestro cuerpo funcione con energía y equilibrio.</p>
+                <p>No todas actúan igual: algunas aportan fibra para la digestión, mientras que otras destacan por su alto contenido de agua y vitamina C para defensas fuertes.</p>
+            </div>
         </div>
 
-        <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?w=500" alt="Banano">
-            <h3>Banano</h3>
-            <p>Excelente fuente de potasio y vitamina B6. Perfecto para recuperar energía después de hacer deporte.</p>
+        <div class="section-title">De la naturaleza a tu mesa</div>
+        
+        <!-- Manzana -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1560806887-1e4cd0b6cbd6?auto=format&fit=crop&w=800&q=80" alt="Manzana Roja" class="card-img">
+            <div class="card-content">
+                <h2>Manzana Roja</h2>
+                <p>Rica en fibra y antioxidantes. Ideal para mejorar la digestión y mantener la energía estable durante el día.</p>
+                <ul class="step-list">
+                    <li><span class="step-letter">A</span> <strong>Digestión:</strong> Contiene pectina, una fibra que cuida la salud intestinal.</li>
+                    <li><span class="step-letter">B</span> <strong>Energía limpia:</strong> Sus azúcares naturales se absorben de forma equilibrada.</li>
+                </ul>
+            </div>
         </div>
 
-        <div class="tarjeta">
-            <img src="https://images.unsplash.com/photo-1550258987-190a2d41a8ba?w=500" alt="Piña">
-            <h3>Piña</h3>
-            <p>Refrescante, hidratante y rica en vitamina C y bromelina, una enzima que facilita la digestión.</p>
+        <!-- Pera -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1514733670128-4ee8d8104e76?auto=format&fit=crop&w=800&q=80" alt="Pera" class="card-img">
+            <div class="card-content">
+                <h2>Pera</h2>
+                <p>Una fruta sumamente hidratante, suave para el estómago y perfecta para aportar potasio y vitaminas del complejo B.</p>
+                <ul class="step-list">
+                    <li><span class="step-letter">A</span> <strong>Hidratación:</strong> Su alto porcentaje de agua ayuda a mantener el cuerpo fresco.</li>
+                    <li><span class="step-letter">B</span> <strong>Bienestar general:</strong> Favorece la circulación y ayuda a calmar la ansiedad por el azúcar.</li>
+                </ul>
+            </div>
         </div>
-    </main>
 
-    <footer>
-        <p>Creado desde mi Honor Pad 8 - 2026</p>
-    </footer>
+        <!-- Banano -->
+        <div class="card">
+            <img src="https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=800&q=80" alt="Banano" class="card-img">
+            <div class="card-content">
+                <h2>Banano</h2>
+                <p>El aliado perfecto para la actividad física y mental, reconocido por su gran aporte de potasio y carbohidratos saludables.</p>
+                <ul class="step-list">
+                    <li><span class="step-letter">A</span> <strong>Músculos y deporte:</strong> Previene calambres gracias a su concentración de minerales.</li>
+                    <li><span class="step-letter">B</span> <strong>Saciedad:</strong> Otorga una sensación prolongada de llenura sin pesadez.</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <strong>Una idea clave:</strong> Consumir frutas de temporada garantiza mejores nutrientes y apoya una alimentación consciente y equilibrada.
+        </div>
+
+    </div>
 
 </body>
 </html>
